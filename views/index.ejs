@@ -17,22 +17,78 @@
 
     <div class="container">
         <div class="card bg-dark text-light">
-            <div class="card-header text-center">
-                <h3>Calculadora de Força elétrica</h3>
+            <div class="card-header">
+                <h5 class="mb-0 text-center">
+                    Calculadora de Força Elétrica 
+                </h5>
             </div>
             <div class="card-body">
-                <form action="/responder" method="POST">
-                    <label for="campo-3"><strong>Digite o valor da  aQ</strong></label>
-                    <input class="form-control" id="campo-3" type="number" placeholder="Digite o valor" name="qa" required />
-                    <label for="campo-4"><strong>Digite o valor da  qB</strong></label>
-                    <input class="form-control" id="campo-4" type="number" placeholder="Digite o valor" name="qb" required /> <label for="campo-5"><strong>Digite o valor da Distância</strong></label>
-                    <input class="form-control" id="campo-5" type="number" placeholder="Digite o valor" name="distancia" required />
-                    <button class="btn btn-light mt-3">Calcular</button>
+                <form action="" class="container-fluid">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="dist">Distância</label>
+                                <input type="number" class="form-control" id="dist" placeholder="Digite seu distancia..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="campo">Digite o qA</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">qA</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="linguagem">Unidade</label>
+                                <select name="lgm" id="linguagem" class="form-control">
+                                    <option value="Selecione">Selecione</option>
+                                    <option value="mc">mC</option>
+                                    <option value="uc">uC</option>
+                                    <option value="nc">nC</option> 
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="campo">Digite o qB</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">qB</span>
+                                    </div>
+                                    <input type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="linguagem">Unidade</label>
+                                <select name="lgm" id="linguagem" class="form-control">
+                                    <option value="Selecione">Selecione</option>
+                                    <option value="mc">mC</option>
+                                    <option value="uc">uC</option>
+                                    <option value="nc">nC</option> 
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-row mb-0">
+                        <div class="col-12 d-flex justify-content-end">
+                            <button class="btn btn-primary mr-2" type="submit">Calcular</button>
+                            <button class="btn btn-danger" type="reset">Limpar</button>
+                        </div>
+                    </div>
+        
                 </form>
-            </div>
-            <div class="card-footer text-center">
-                <h3>Resposta</h3>
-                <strong><span><%= resposta%></span></strong>
             </div>
         </div>
     </div>
