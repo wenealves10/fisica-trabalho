@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({
 let resultado = 0
 const calculo = (unidade1,unidade2, qA, qB, D) => {
     const K = 9 * (Math.pow(10,9))
+    const dist = (D / 100)
     let F = 0
     const unidade = {
         mc: Math.pow(10,-3),
@@ -19,7 +20,7 @@ const calculo = (unidade1,unidade2, qA, qB, D) => {
         nc: Math.pow(10,-9), 
     }
 
-    return F = (K * qA * unidade[unidade1] * qB * unidade[unidade2]) / Math.pow(D,2) 
+    return F = (K * qA * unidade[unidade1] * qB * unidade[unidade2]) / Math.pow(dist,2) 
     
 }
 
