@@ -23,12 +23,12 @@
                 </h5>
             </div>
             <div class="card-body">
-                <form action="" class="container-fluid">
+                <form action="/responder" class="container-fluid" method="POST">
                     <div class="form-row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="dist">Distância</label>
-                                <input type="number" class="form-control" id="dist" placeholder="Digite seu distancia..."/>
+                                <label for="dist">Distância entre as cargas (M)</label>
+                                <input required name="distancia" type="text" class="form-control" id="dist" placeholder="Digite seu distancia..."/>
                             </div>
                         </div>
                     </div>
@@ -40,14 +40,14 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">qA</span>
                                     </div>
-                                    <input type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
+                                    <input required name="qA" type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="linguagem">Unidade</label>
-                                <select name="lgm" id="linguagem" class="form-control">
+                                <select name="unidade1" id="linguagem" class="form-control">
                                     <option value="Selecione">Selecione</option>
                                     <option value="mc">mC</option>
                                     <option value="uc">uC</option>
@@ -64,14 +64,14 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">qB</span>
                                     </div>
-                                    <input type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
+                                    <input name="qB" type="number" class="form-control" id="number" placeholder="Digite seu valor"/>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="form-group">
                                 <label for="linguagem">Unidade</label>
-                                <select name="lgm" id="linguagem" class="form-control">
+                                <select name="unidade2" id="linguagem" class="form-control">
                                     <option value="Selecione">Selecione</option>
                                     <option value="mc">mC</option>
                                     <option value="uc">uC</option>
@@ -90,14 +90,25 @@
         
                 </form>
             </div>
+            <div class="card-footer text-center">
+                <h3>Resposta</h3>
+               <% if(!resultado){ %>
+                    <p>ainda não calculado</p>
+               <% }else{ %>
+                    ultima resposta: 
+                    <p><%= resultado.toFixed(2) %>N</p>
+               <% } %> 
+            </div>
         </div>
     </div>
 
 
-    <div class="container d-flex justify-content-center">
-        <span class="text-dark">
-            Copyright © WENEDEV™ CODÓ 2020
-        </span>
+    <div class="container text-center mt-5">
+      <h3>Trabalho de Física |||</h3>
+      <p>Nome: WENE ALVES DE OLIVEIRA</p>
+      <p>Nome: VITÓRIA NERES NASCIMENTO</p>
+      <p>Nome: MARIA EDUARDA</p>
+      <p>Nome: ANTONIA MARIA</p>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
