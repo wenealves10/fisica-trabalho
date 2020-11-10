@@ -35,7 +35,7 @@ app.get('/',(req, res) =>{
 app.post('/responder',(req, res) =>{
     console.log(req.body)
     resultado = calculo(req.body.unidade1, req.body.unidade2, parseFloat(req.body.qA), parseFloat(req.body.qB),parseFloat(req.body.distancia))
-    res.redirect('/')
+     res.redirect('/')
 })
 
 
